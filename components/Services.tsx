@@ -9,56 +9,56 @@ const services = [
     title: 'Commercial Real Estate Financing',
     description: 'Commercial real estate owners love our business Real Estate loans for commercial construction, property purchase, refinancing combined with some of the lowest mortgage rates.',
     highlights: ['Property Purchase', 'Refinancing', 'Construction Loans'],
-    color: 'from-orange-400 to-red-500'
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop',
   },
   {
     icon: Users,
     title: 'SBA Loans',
     description: 'The SBA offers numerous loan programs to help entrepreneurs start, manage and grow their businesses. SBA loan is a small business loan that is partly guaranteed by the U.S. government.',
     highlights: ['Startup Funding', 'Business Growth', 'Government Backed'],
-    color: 'from-blue-400 to-blue-600'
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop',
   },
   {
     icon: Hammer,
     title: 'Fix N Flip Loans',
     description: 'Looking to purchase and rehab an investment property? We are your go-to short-term financing solution provider to fund the purchase and repairs of an investment property.',
     highlights: ['Fast Approval', 'Property Renovation', 'Investment Ready'],
-    color: 'from-green-400 to-teal-500'
+    image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=300&fit=crop',
   },
   {
     icon: Zap,
     title: 'Working Capital Loans',
     description: 'With our Working Capital Loans, we\'ve helped thousands of businesses need collateral for amounts under $725,000 - unlike traditional bank loans.',
     highlights: ['No Collateral', 'Quick Funding', 'Up to $725K'],
-    color: 'from-yellow-400 to-orange-500'
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop',
   },
   {
     icon: Building2,
     title: 'Hard Money Loans',
     description: 'Hard money loans are designed to be short-term. We can help bridge the gap in your investing. Typically you can receive up to 75% of the value of your property.',
     highlights: ['Short Term', 'Quick Turnaround', 'Up to 75% LTV'],
-    color: 'from-red-400 to-pink-500'
+    image: 'https://images.unsplash.com/photo-1554224311-beee415c15c7?w=400&h=300&fit=crop',
   },
   {
     icon: Building,
     title: 'Apartment Loans',
     description: 'Planning to purchase an apartment building, a condominium or any multifamily residential complex? We can get a multifamily loan approved for you for 85% of the total value.',
     highlights: ['Multi-unit Properties', 'Up to 85% LTV', 'Portfolio Loans'],
-    color: 'from-indigo-400 to-blue-600'
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop',
   },
   {
     icon: Landmark,
     title: 'Bridge Loans',
     description: 'Short term mortgage financing that bridges the gap between the termination of one loan and the beginning of another. Perfect for interim financing needs.',
     highlights: ['Interim Financing', 'Quick Closing', 'Gap Solution'],
-    color: 'from-cyan-400 to-blue-500'
+    image: 'https://images.unsplash.com/photo-1486311338391-e3db7939f8d9?w=400&h=300&fit=crop',
   },
   {
     icon: Wrench,
     title: 'Equipment Financing',
     description: 'Buying equipment becomes urgent as businesses strive to move forward. We understand the difficulty and provide flexible equipment financing solutions.',
     highlights: ['Asset Financing', 'Business Expansion', 'Equipment Purchase'],
-    color: 'from-purple-400 to-pink-600'
+    image: 'https://images.unsplash.com/photo-1581091160550-2173dba999ef?w=400&h=300&fit=crop',
   },
 ];
 
@@ -119,14 +119,14 @@ export default function Services() {
                 whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
                 className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100"
               >
-                {/* Image Placeholder */}
-                <div className={`h-40 bg-gradient-to-br ${service.color} flex items-center justify-center relative overflow-hidden`}>
-                  <div className="absolute inset-0 opacity-20">
-                    <svg className="w-full h-full" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16z" />
-                    </svg>
-                  </div>
-                  <Icon size={60} className="text-white z-10" />
+                {/* Service Image */}
+                <div className="h-40 bg-gray-200 overflow-hidden relative group">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                 </div>
 
                 {/* Content */}
